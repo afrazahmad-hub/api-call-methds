@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -47,45 +47,58 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="staticCall"
           className={styles.card}
-          target="_blank"
+          // target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
+          <h2 className={inter.className}>Books List (Static Call)</h2>
           <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
+            Fetch books from api through statis call.
           </p>
         </a>
 
         <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="serverCall"
           className={styles.card}
-          target="_blank"
+          // target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
+          <h2 className={inter.className}>Books List (Server Call)</h2>
+          <p className={inter.className}>
+            {" "}
+            Fetch books from api through server call.
+          </p>
         </a>
 
         <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="clientCall"
           className={styles.card}
-          target="_blank"
+          // target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
+          <h2 className={inter.className}>Data Call Client Side</h2>
+          <p className={inter.className}>Client side data will be shown.</p>
+        </a>
+        <a
+          href="paralel"
+          className={styles.card}
+          // target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={inter.className}>Paralel Call</h2>
+          <p className={inter.className}>Paralel call.</p>
+        </a>
+        <a
+          href="squential"
+          className={styles.card}
+          // target="_blank"
+          rel="noopener noreferrer"
+        >
+          <h2 className={inter.className}>Squential Call</h2>
+          <p className={inter.className}>Squential call.</p>
         </a>
       </div>
     </main>
-  )
+  );
 }
